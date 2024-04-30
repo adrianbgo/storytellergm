@@ -1,0 +1,11 @@
+.navLink {
+  text-decoration: none;
+  background-color: grey;
+  color: black;
+  padding: 1rem 2rem;
+
+  &:hover {
+    background-color: darkgrey;
+    color: white;
+  }
+}
