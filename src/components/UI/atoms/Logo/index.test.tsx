@@ -10,4 +10,12 @@ describe("Logo", () => {
 
     expect(logo).toBeInTheDocument();
   });
+
+  it("renders the script", () => {
+    render(<Logo />);
+
+    const logo = screen.getByTestId("logo");
+
+    expect(logo).toHaveTextContent("Storyteller GM");
+  });
 });
