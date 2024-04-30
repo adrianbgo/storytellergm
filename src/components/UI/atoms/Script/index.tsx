@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { Lugrasimo } from "next/font/google";
 import styles from "./index.module.css";
-const lugrasimo = Lugrasimo({ weight: "400" });
+const lugrasimo = Lugrasimo({ weight: "400", subsets: ["latin"] });
 
 interface IScript {
   size?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "small" | "xs";
