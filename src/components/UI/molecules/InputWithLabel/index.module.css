@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.inputError {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-weight: 700;
+  color: red;
+  background-color: lightpink;
+  border-radius: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: normal;
+  border: 1px solid slategray;
+  border-radius: 0.5rem;
+  &::placeholder {
+    opacity: 60%;
+  }
+}
+
+.inputLong {
+  min-height: 10rem;
+  max-height: 20rem;
+  resize: vertical;
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: normal;
+  border: 1px solid slategray;
+  border-radius: 0.5rem;
+  &::placeholder {
+    opacity: 60%;
+  }
+}
