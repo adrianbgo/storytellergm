@@ -17,7 +17,7 @@ const Button: React.FC<IButton> = ({
   return (
     <div
       className={`${styles.button} ${disabled ? styles.disabled : variant === "primary" ? styles.primary : styles.secondary}`}
-      onClick={!disabled ? onClick : () => {}}
+      onClick={disabled ? () => {} : onClick}
       data-testid={disabled ? "button-disabled" : "button"}
     >
       {text}

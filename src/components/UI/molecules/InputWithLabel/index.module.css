@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 1rem;
 }
 
 .label {
@@ -29,7 +30,6 @@
 }
 
 .input {
-  width: 100%;
   padding: 0.75rem;
   font-weight: normal;
   border: 1px solid slategray;
@@ -43,7 +43,6 @@
   min-height: 10rem;
   max-height: 20rem;
   resize: vertical;
-  width: 100%;
   padding: 0.75rem;
   font-weight: normal;
   border: 1px solid slategray;
