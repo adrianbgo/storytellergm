@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import {
@@ -41,7 +42,7 @@ const Footer = () => {
       <div className={styles.footerColumn}>
         <p>{`© ${year}. All Rights Reserved.`}</p>
       </div>
-      <div className={styles.footerColumn}>
+      <div className={styles.footerLinks}>
         <Link href="/">Home</Link>
         <Link href="/adventures">Adventure Writing</Link>
         <Link href="/blog">Blog</Link>

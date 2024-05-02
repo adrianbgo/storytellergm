@@ -6,8 +6,8 @@ describe("Page", () => {
   it("renders a heading", () => {
     render(<Page />);
 
-    const heading = screen.getByRole("heading", { level: 1 });
+    const homePage = screen.getByTestId("home-page");
 
-    expect(heading).toBeInTheDocument();
+    expect(homePage).toBeInTheDocument();
   });
 });

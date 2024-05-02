@@ -11,9 +11,10 @@ const AboutSection = () => {
         <Image
           src="/images/adrian-bauer-headshot.jpg"
           alt="Adrian Bauer"
-          width={0}
-          height={0}
+          width={1000}
+          height={1000}
           className={styles.headshot}
+          loading="eager"
         />
         <div className={styles.copyText}>
           <p>

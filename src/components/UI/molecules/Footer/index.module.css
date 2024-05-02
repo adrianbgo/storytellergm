@@ -4,11 +4,13 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  height: 4rem;
 }
 
 .footerColumn {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -16,5 +18,15 @@
   color: gold;
   &:hover {
     color: darkgoldenrod;
+  }
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  & > * {
+    width: 25%;
   }
 }
