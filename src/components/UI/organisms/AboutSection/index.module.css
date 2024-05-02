@@ -1,0 +1,16 @@
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headshot {
+  width: 100%;
+  height: fit-content;
+}
+
+.copyText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
