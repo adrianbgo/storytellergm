@@ -1,9 +1,10 @@
+"use client";
 import {
   findInputError,
   isFormInvalid,
 } from "@/utils/formValidation/formValidation";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { ChangeEvent, FC } from "react";
+import React, { FC } from "react";
 import { FieldValues, RegisterOptions, useFormContext } from "react-hook-form";
 import { MdError } from "react-icons/md";
 import styles from "./index.module.css";

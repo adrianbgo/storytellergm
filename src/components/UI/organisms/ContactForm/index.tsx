@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FieldValues, FormProvider, useForm } from "react-hook-form";
 import InputWithLabel from "../../molecules/InputWithLabel";

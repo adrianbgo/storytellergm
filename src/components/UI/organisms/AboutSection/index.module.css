@@ -2,10 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  & > h3 {
+    font-size: xx-large;
+    padding-bottom: 3rem;
+  }
 }
 
 .headshot {
-  width: 100%;
+  width: 70%;
+  justify-self: center;
   height: fit-content;
 }
 
