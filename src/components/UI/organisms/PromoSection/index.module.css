@@ -1,0 +1,34 @@
+.promoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.promoSectionColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  & > a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+    color: gold;
+    &:hover {
+      color: darkgoldenrod;
+    }
+    height: 2rem;
+  }
+  & > p {
+    line-height: 1.5;
+    & > .extLink {
+      font-size: medium;
+      color: gold;
+      &:hover {
+        color: darkgoldenrod;
+      }
+    }
+  }
+}

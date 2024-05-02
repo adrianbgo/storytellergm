@@ -13,6 +13,7 @@ const NavBar = () => {
         <NavLink href="/adventures">Adventure Writing</NavLink>
         <NavLink href="/blog">Blog</NavLink>
         <NavLink href="/hire">Hire Me</NavLink>
+        <NavLink href="/community">Community & Cons</NavLink>
       </div>
     </nav>
   );
