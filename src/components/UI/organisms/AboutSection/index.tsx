@@ -21,7 +21,7 @@ const AboutSection = () => {
             {`My name is Adrian Bauer and I have been involved in the TTRPG scene since 2015. I could put my whole life story on here, but that may bore you, so I'll give you the brief summary.`}
           </p>
           <p>
-            {`You may know me frxom the numerous campaigns and one-shots that I've run at conventions, or you may know me from playing in a scenario that I've written. I like to do a lot of charity work on top of my games, so be sure to reach out if that's something you're interested in being involved with.`}
+            {`You may know me from the numerous campaigns and one-shots that I've run at conventions, or you may know me from playing in a scenario that I've written. I like to do a lot of charity work on top of my games, so be sure to reach out if that's something you're interested in being involved with.`}
           </p>
           <p>
             {`Born and raised in Ohio, I moved to Rochester for college, where I got heavily involved in running TTRPG games. It wasn't until a year into GMing D&D and Call of Cthulhu games that I actualy got the opportunity to be a player in a game. I have always worked to create immersive and roleplay-heavy RPG sessions which allow players to explore not only their players, but their emotions in a safe and supportive environment.`}

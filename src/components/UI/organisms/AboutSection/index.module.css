@@ -9,9 +9,12 @@
 }
 
 .headshot {
+  height: 100%;
   width: 70%;
+  object-fit: contain;
   justify-self: center;
-  height: fit-content;
+  height: max-content;
+  align-self: center;
 }
 
 .copyText {
