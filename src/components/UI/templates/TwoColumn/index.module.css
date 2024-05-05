@@ -1,5 +1,18 @@
 .twoColumn {
+  width: 100%;
+  height: 100%;
+  container-type: inline-size;
+}
+
+.contain {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+}
+
+@container (min-width: 980px) {
+  .contain {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
 }

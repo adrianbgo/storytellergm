@@ -13,7 +13,7 @@ const Script: React.FC<PropsWithChildren<IScript>> = ({
 }) => {
   return (
     <div data-testid="script" className={lugrasimo.className}>
-      <p className={styles[size]} data-testid="script-p">
+      <p className={`${styles.global} ${styles[size]}`} data-testid="script-p">
         {children}
       </p>
     </div>
