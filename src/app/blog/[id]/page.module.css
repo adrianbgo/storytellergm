@@ -1,0 +1,19 @@
+.blogPost {
+  padding: 3rem;
+}
+
+.postTitle {
+  font-weight: 900;
+  font-size: xx-large;
+  margin-bottom: 0.25rem;
+}
+
+.postDate {
+  color: lightgray;
+  font-size: normal;
+  margin-bottom: 0.75rem;
+}
+
+.postBody {
+  color: gray;
+}
