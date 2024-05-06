@@ -3,6 +3,58 @@ body {
   color: white;
 }
 
+h1 {
+  font-size: 2em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.7411em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.5157em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.3195em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+h5 {
+  font-size: 1.1487em;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
 p {
+  margin-bottom: 1rem;
+  font-size: 1em;
+}
+
+small {
+  font-size: 0.8706em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+li {
   margin-bottom: 1rem;
 }

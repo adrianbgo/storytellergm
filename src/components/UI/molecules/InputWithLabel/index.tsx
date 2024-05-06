@@ -2,7 +2,7 @@
 import {
   findInputError,
   isFormInvalid,
-} from "@/utils/formValidation/formValidation";
+} from "@/utils/formValidation";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { FC } from "react";
 import { FieldValues, RegisterOptions, useFormContext } from "react-hook-form";
