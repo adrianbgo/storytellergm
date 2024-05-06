@@ -1,6 +1,20 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import NavBar from ".";
+import userEvent from "@testing-library/user-event";
+
+const setup = (jsx: React.JSX.Element) => {
+  return {
+    user: userEvent.setup(),
+    ...render(jsx),
+  };
+};
+
+const resizeWindow = (x: number, y: number) => {
+  window.innerWidth = x;
+  window.innerHeight = y;
+  window.dispatchEvent(new Event("resize"));
+};
 
 describe("NavBar", () => {
   it("renders the NavBar", () => {
@@ -40,5 +54,20 @@ describe("NavBar", () => {
 
     expect(hireLink).toBeInTheDocument();
     expect(hireLink).toHaveAttribute("href", "/hire");
+  });
+
+  it("hides the links when not isOpen and shows when isOpen", async () => {
+    const { user } = setup(<NavBar />);
+    const navLinks = screen.getByTestId("navLinks");
+    expect(navLinks).toBeInTheDocument();
+
+    resizeWindow(500, 300);
+    const icon = screen.getByTestId("icon");
+    expect(icon).toBeInTheDocument();
+    expect(navLinks).toHaveClass("false");
+
+    await user.click(icon);
+
+    expect(navLinks).toHaveClass("linksShown");
   });
 });

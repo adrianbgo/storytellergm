@@ -12,13 +12,17 @@ const NavBar = () => {
         <Logo />
       </div>
       <a
-        href="javascript:void(0)"
+        href="#"
         className={styles.icon}
         onClick={() => setIsOpen(!isOpen)}
+        data-testid="icon"
       >
         <FaBars />
       </a>
-      <div className={`${styles.links} ${isOpen && styles.linksShown}`}>
+      <div
+        className={`${styles.links} ${isOpen && styles.linksShown}`}
+        data-testid="navLinks"
+      >
         <NavLink href="/">Home</NavLink>
         <NavLink href="/adventures">Adventure Writing</NavLink>
         <NavLink href="/blog">Blog</NavLink>
