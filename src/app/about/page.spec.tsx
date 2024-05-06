@@ -1,7 +1,20 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { createEvent, fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import AboutPage from "./page";
+import { vi } from "vitest";
+
+vi.mock("next/font/google", () => ({
+  Lugrasimo: () => ({
+    style: {
+      fontFamily: "mocked",
+    },
+  }),
+}));
+
+afterEach(() => {
+  vi.clearAllMocks();
+});
 
 const setup = (jsx: React.JSX.Element) => {
   return {
@@ -32,7 +45,7 @@ describe("About Page", () => {
 
   it("runs the submit event", async () => {
     const { user } = setup(<AboutPage />);
-    const logSpy = jest.spyOn(console, "log");
+    const logSpy = vi.spyOn(console, "log");
 
     const nameInput = screen.getByLabelText("Name");
     const emailInput = screen.getByLabelText("Email");

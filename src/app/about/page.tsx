@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import styles from "./page.module.css";
 import NavBar from "@/components/UI/molecules/NavBar";
 import AboutSection from "@/components/UI/organisms/AboutSection";

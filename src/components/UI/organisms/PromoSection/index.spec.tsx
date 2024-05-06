@@ -1,12 +1,17 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import PromoSection from ".";
+import { vi } from "vitest";
 
 const originalWarn = console.error.bind(console.error);
 
 beforeAll(() => {
   console.error = (msg) =>
     !msg.toString().includes("Support for defaultProps") && originalWarn(msg);
+});
+
+afterEach(() => {
+  vi.clearAllMocks();
 });
 
 afterAll(() => {

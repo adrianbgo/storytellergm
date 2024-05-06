@@ -1,7 +1,20 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import Script from ".";
 import styles from "./index.module.css";
+import { vi } from "vitest";
+
+vi.mock("next/font/google", () => ({
+  Lugrasimo: () => ({
+    style: {
+      fontFamily: "mocked",
+    },
+  }),
+}));
+
+afterEach(() => {
+  vi.clearAllMocks();
+});
 
 describe("Script", () => {
   it("renders on the page", () => {

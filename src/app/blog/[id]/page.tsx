@@ -1,7 +1,8 @@
-import Date from "@/components/UI/atoms/Date";
+import DateComponent from "@/components/UI/atoms/Date";
 
 import { getAllPostIds, getPostData } from "@/utils/posts";
 import styles from "./page.module.css";
+import React, { useEffect, useState } from "react";
 type Params = {
   id: string;
 };
@@ -24,14 +25,31 @@ export const generateMetadata = async ({ params }: Props) => {
   };
 };
 
-const Post: React.FC<Props> = async ({ params }) => {
-  const postData: PostData = await getPostData(params.id);
+const Post: React.FC<Props> = ({ params }) => {
+  const [postData, setPostData] = useState<PostData>({
+    title: "",
+    date: new Date().toISOString(),
+    contentHtml: "",
+  });
+
+  useEffect(() => {
+    console.log(new Date(postData.date));
+    const fetchData = async () => {
+      try {
+        const res: PostData = await getPostData(params.id);
+        setPostData(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
-    <div className={styles.blogPost}>
+    <div className={styles.blogPost} data-testid="blogPost">
       <h1 className={styles.postTitle}>{postData.title}</h1>
       <div className={styles.postDate}>
-        <Date dateString={postData.date} />
+        <DateComponent dateString={postData.date} />
       </div>
 
       <div

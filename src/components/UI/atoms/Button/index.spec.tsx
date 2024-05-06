@@ -1,9 +1,10 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import Button from ".";
 import userEvent from "@testing-library/user-event";
 
 import styles from "./index.module.css";
+import { vi } from "vitest";
 
 const setup = (jsx: React.JSX.Element) => {
   return {
@@ -12,8 +13,12 @@ const setup = (jsx: React.JSX.Element) => {
   };
 };
 
+afterEach(() => {
+  vi.clearAllMocks();
+});
+
 describe("Button", () => {
-  const testFire = jest.fn();
+  const testFire = vi.fn();
 
   it("renders default", async () => {
     const { user } = setup(<Button text="Test Button" onClick={testFire} />);
