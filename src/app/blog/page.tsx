@@ -14,7 +14,7 @@ const BlogPage = () => {
   const allPostsData: AllPostsData = getSortedPostsData();
 
   return (
-    <div className={styles.blogPage}>
+    <div className={styles.blogPage} data-testid="blogPage">
       <section className={styles.blogSection}>
         <h2 className={styles.blogHeading}>Blog</h2>
         <ul className={styles.blogList}>

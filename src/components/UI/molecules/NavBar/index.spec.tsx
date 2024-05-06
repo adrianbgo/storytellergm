@@ -1,7 +1,21 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import NavBar from ".";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
+import styles from "./index.module.css";
+
+vi.mock("next/font/google", () => ({
+  Lugrasimo: () => ({
+    style: {
+      fontFamily: "mocked",
+    },
+  }),
+}));
+
+afterEach(() => {
+  vi.clearAllMocks();
+});
 
 const setup = (jsx: React.JSX.Element) => {
   return {
@@ -68,6 +82,6 @@ describe("NavBar", () => {
 
     await user.click(icon);
 
-    expect(navLinks).toHaveClass("linksShown");
+    expect(navLinks).toHaveClass(styles.linksShown);
   });
 });

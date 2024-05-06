@@ -1,7 +1,8 @@
-import "@testing-library/jest-dom";
+import React from "react";
 import { createEvent, fireEvent, render, screen } from "@testing-library/react";
 import ContactForm from ".";
 import userEvent from "@testing-library/user-event";
+import { vi } from "vitest";
 
 const setup = (jsx: React.JSX.Element) => {
   return {
@@ -10,9 +11,13 @@ const setup = (jsx: React.JSX.Element) => {
   };
 };
 
+afterEach(() => {
+  vi.clearAllMocks();
+});
+
 describe("ContactForm", () => {
   it("renders", () => {
-    const mockSubmit = jest.fn();
+    const mockSubmit = vi.fn();
     const { user } = setup(<ContactForm onSubmit={mockSubmit} />);
 
     const form = screen.getByTestId("contact-form");
@@ -20,7 +25,7 @@ describe("ContactForm", () => {
   });
 
   it("validates", async () => {
-    const mockSubmit = jest.fn();
+    const mockSubmit = vi.fn();
     const { user } = setup(<ContactForm onSubmit={mockSubmit} />);
     const nameInput = screen.getByLabelText("Name");
     const emailInput = screen.getByLabelText("Email");
@@ -36,7 +41,7 @@ describe("ContactForm", () => {
   });
 
   it("submits", async () => {
-    const mockSubmit = jest.fn();
+    const mockSubmit = vi.fn();
     const { user } = setup(<ContactForm onSubmit={mockSubmit} />);
 
     const nameInput = screen.getByLabelText("Name");
