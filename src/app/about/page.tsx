@@ -7,13 +7,13 @@ import PromoSection from "@/components/UI/organisms/PromoSection";
 import ContactForm from "@/components/UI/organisms/ContactForm";
 import Footer from "@/components/UI/molecules/Footer";
 
-export default function Home() {
+export default function AboutPage() {
   return (
     <>
       <header>
         <NavBar />
       </header>
-      <main className={styles.homePage} data-testid="home-page">
+      <main className={styles.aboutPage} data-testid="about-page">
         <div className={styles.content}>
           <AboutSection />
           <PromoSection />

@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { createEvent, fireEvent, render, screen } from "@testing-library/react";
-import Page from "./page";
 import userEvent from "@testing-library/user-event";
+import AboutPage from "./page";
 
 const setup = (jsx: React.JSX.Element) => {
   return {
@@ -21,17 +21,17 @@ afterAll(() => {
   console.error = originalWarn;
 });
 
-describe("Page", () => {
+describe("About Page", () => {
   it("renders the homepage", () => {
-    render(<Page />);
+    render(<AboutPage />);
 
-    const homePage = screen.getByTestId("home-page");
+    const aboutPage = screen.getByTestId("about-page");
 
-    expect(homePage).toBeInTheDocument();
+    expect(aboutPage).toBeInTheDocument();
   });
 
   it("runs the submit event", async () => {
-    const { user } = setup(<Page />);
+    const { user } = setup(<AboutPage />);
     const logSpy = jest.spyOn(console, "log");
 
     const nameInput = screen.getByLabelText("Name");
