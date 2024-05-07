@@ -19,12 +19,13 @@ const ImageWrapper: React.FC<PropsWithChildren<IImageWrapper>> = ({
         alt={alt}
         placeholder="blur"
         blurDataURL={src}
-        quality={100}
         fill
-        sizes="100vw"
+        quality={100}
+        // width={10000}
+        // height={10000}
         style={{ objectFit: "cover", zIndex: -10000 }}
       />
-      {children}
+      <div className={styles.textWrapper}>{children}</div>
     </div>
   );
 };
