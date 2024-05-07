@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prepare": "husky",
     "test": "vitest",
-    "test:coverage": "vitest --coverage",
+    "test:coverage": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },

@@ -1,0 +1,15 @@
+.heroSection {
+  & > * > small {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  & > * > h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+
+  & > div {
+    width: 30%;
+  }
+}
