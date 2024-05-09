@@ -1,0 +1,12 @@
+.testimonials {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.testimonialsTitle {
+  font-size: 48px;
+  margin: 0;
+  padding: 0;
+}

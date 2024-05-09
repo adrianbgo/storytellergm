@@ -1,14 +1,9 @@
 import React from "react";
 import styles from "./index.module.css";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
+import { Testimonial } from "@/types/Testimonial";
 
-interface ITestimonial {
-  author: string;
-  title: string;
-  quote: string;
-}
-
-const Testimonial: React.FC<ITestimonial> = ({ author, title, quote }) => {
+const Testimonial: React.FC<Testimonial> = ({ author, title, quote }) => {
   return (
     <div className={styles.testimonial} data-testid="testimonial">
       <div className={styles.testimonialQuote} data-testid="quote">
