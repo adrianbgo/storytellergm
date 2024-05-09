@@ -1,0 +1,40 @@
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 2rem;
+  background: #00aabb;
+  color: white;
+  border-radius: 1em;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #00aabb;
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -20px;
+  }
+}
+
+.testimonialQuote {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.testimonialAuthor {
+  font-size: 32px;
+  margin: 0;
+}
+
+.testimonialTitle {
+  opacity: 0.75;
+}
